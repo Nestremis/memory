@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,900&display=swap');
+
+body,
+html {
+  background-image: url('wood.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+  background-clip: border-box;
+}
+
+
+h1 {
+  font-family: 'Grandstander', cursive;
+  margin: 10px;
+  font-size: 4rem;
+  color: rgb(0, 170, 255);
+  opacity: .8;
+  -webkit-text-stroke: 2px black;
+  text-shadow:
+    4px 4px 0 rgb(7, 12, 12),
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+input {
+  box-shadow: inset 0 0 2px;
+  width: 30vw;
+  height: 5vh;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  background-color: rgb(236, 236, 176);
+}
+
+input:focus {
+  outline: none;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.header {
+  text-align: center;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5vh;
+}
+
+.cards-table {
+  /* background-color: cadetblue; */
+  width: 94vw;
+  height: 70vh;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex: wrap;
+  flex-direction: row;
+  align-content: center;
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+  grid-gap: 2vw;
+}
+
+.card {
+  margin: auto;
+  height: 13vh;
+  width: 26vh;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: 12px 12px 10px black;
+  border-radius: 5px;
+  border: 3px solid rgb(17, 37, 37);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('wildlife.jpg');
+  background-size: cover;
+}
+
+.card-translation {
+  height: 13vh;
+  width: 26vh;
+  background: #F3F6B0;
+  background: -webkit-radial-gradient(center, #F3F6B0, #7C671F);
+  background: -moz-radial-gradient(center, #F3F6B0, #7C671F);
+  background: radial-gradient(ellipse at center, #F3F6B0, #7C671F);
+  background-size: cover;
+  margin: auto;
+  box-shadow: 12px 12px 10px black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(17, 37, 37);
+}
+
