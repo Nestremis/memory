@@ -43,7 +43,7 @@ input {
   margin-bottom: 30px;
   text-align: center;
   font-weight: 700;
-  background-color: rgb(236, 236, 176);
+  background-color: rgb(219, 219, 150);
 }
 
 input:focus {
@@ -112,4 +112,3 @@ input:focus {
   align-items: center;
   border: 2px solid rgb(17, 37, 37);
 }
-

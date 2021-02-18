@@ -4,11 +4,10 @@ import Card from './Card';
 
 function App () {     
   const [words, setWords] = useState([]); 
-  const [pairOfCards, setPairOfCards] = useState([]); 
-
+  
   const addNewCards = (e) =>  {
     const input = document.querySelector('input');
-        if (e.key === 'Enter' && input.value !== '' && words.length < 24 ) {            
+    if (e.key === 'Enter' && input.value !== '' && words.length < 24 ) {            
           setWords([...words.sort(() => .5 - Math.random()),
             {
               id: words.length,
@@ -18,32 +17,37 @@ function App () {
               id: words.length,
               key: input.value.slice(input.value.indexOf('=') +1), 
             }
-          ],);     
-
-          input.value = '';
-  }};
-
-  
-  function checkIfCardsMatch ({activeCardsId, isFlipped, setIsFlipped, setActiveCardsId}) {  
-    
-    setPairOfCards ( [...pairOfCards, activeCardsId] );
-    
-    if (pairOfCards.length===2 && pairOfCards[0]===pairOfCards[1]) {
-       setIsFlipped(!isFlipped) 
-    } else {    
-        setTimeout(()=>{setIsFlipped(isFlipped)}, 2000);
-    }; 
-    
-    setTimeout(()=>{setActiveCardsId(activeCardsId)}, 2000);
-    setTimeout(()=> {setPairOfCards(pairOfCards)}, 2000);
+          ]); 
+    input.value = '';
+    }
   };
+
+        
+  const [pairOfCards, setPairOfCards] = useState([]); 
+  
+  function checkIfCardsMatch ({activeCardsId, isFlipped, setIsFlipped, setActiveCardsId}) { 
+
+    // let item = activeCardsId[0];
+
+    setPairOfCards ( [...pairOfCards, activeCardsId ] ); //PRZEKAZANIE ID do stanu globalnego - tu jest błąd
+       
+       if ( pairOfCards.length >=2 && pairOfCards[0]===pairOfCards[1]) {
+        setIsFlipped(!isFlipped); 
+        setTimeout(()=>{setActiveCardsId([])}, 2000);
+        setTimeout(()=>{setPairOfCards([])}, 2000);
+      } else {    
+        setTimeout(()=>{setIsFlipped(isFlipped)}, 2000);
+        setTimeout(()=>{setActiveCardsId([])}, 2000);
+        setTimeout(()=> {setPairOfCards([])}, 2000);
+    } 
+  }; 
     
         
   return (
   <>
     <div className='wrapper'>
         <div className = 'header'>    
-          <h1 className ='logo'>  Memory! </h1>
+          <h1 className ='logo'>   dynamic memory </h1>
           <input 
             type='text'     
             placeholder = 'word=translation'
