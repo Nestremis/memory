@@ -1,0 +1,12 @@
+input {
+    box-shadow: inset 3px 3px 8px 0px black;
+    border-radius: 6px;
+    width: clamp(260px, 30vw, 500px);
+    min-height: calc(24px + 2vmin);
+    text-align: center;
+    background-color: beige;
+  }
+  
+  input:focus {
+    outline: none;
+  }
