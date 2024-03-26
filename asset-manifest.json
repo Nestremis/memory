@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/memory/static/css/main.042b27c4.css",
+    "main.js": "/memory/static/js/main.ae6a27b7.js",
+    "static/media/wood.png": "/memory/static/media/wood.292c7e33a0aecbedd480.png",
+    "static/media/wildlife.jpg": "/memory/static/media/wildlife.15c32fbf2da8a6647a53.jpg",
+    "static/media/trash.svg": "/memory/static/media/trash.8bf5141ea00382a67d8dfa4af50ac30a.svg",
+    "index.html": "/memory/index.html",
+    "static/media/repeat.svg": "/memory/static/media/repeat.f4914a07ff8ed53d76a6a2dcee6ff7d5.svg",
+    "main.042b27c4.css.map": "/memory/static/css/main.042b27c4.css.map",
+    "main.ae6a27b7.js.map": "/memory/static/js/main.ae6a27b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.042b27c4.css",
+    "static/js/main.ae6a27b7.js"
+  ]
+}
